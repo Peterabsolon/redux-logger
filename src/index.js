@@ -63,6 +63,10 @@ const store = createStore(
   }
 
   const logBuffer = [];
+  
+  setInterval(() => {
+    console.log('whatever')
+  }, 3000)
 
   return ({ getState }) => next => (action) => {
     // Exit early if predicate function returns 'false'
